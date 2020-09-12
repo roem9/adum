@@ -38,29 +38,29 @@
                                 $no = 0;
                             foreach ($kelas['peserta'] as $data) :?>
                                 <tr>
-                                    <td><?= $kelas['kelas']['nama_kpq']?></td>
-                                    <td><?= $kelas['kelas']['program']?></td>
-                                    <td><?= $kelas['kelas']['tempat']?></td>
-                                    <td><?= $kelas['kelas']['hari'] . " " . $kelas['kelas']['jam']?></td>
-                                    <td><?= ++$no?></td>
+                                    <td><?= ucwords(strtolower($kelas['kelas']['nama_kpq']))?></td>
+                                    <td><?= ucwords(strtolower($kelas['kelas']['program']))?></td>
+                                    <td><?= ucwords(strtolower($kelas['kelas']['tempat']))?></td>
+                                    <td><?= ucwords(strtolower($kelas['kelas']['hari'] . " " . $kelas['kelas']['jam']))?></td>
+                                    <td><?= ucwords(strtolower(++$no))?></td>
                                     <td><?= date("d-m-Y", strtotime($data['peserta']['tgl_masuk']))?></td>
-                                    <td><?= $data['peserta']['nama_peserta']?></td>
-                                    <td><?= $data['peserta']['t4_lahir']?></td>
+                                    <td><?= ucwords(strtolower($data['peserta']['nama_peserta']))?></td>
+                                    <td><?= ucwords(strtolower($data['peserta']['t4_lahir']))?></td>
                                     <td><?= $data['peserta']['tgl_lahir']?></td>
-                                    <td><?= $data['peserta']['jk']?></td>
-                                    <td><?= $data['peserta']['pendidikan']?></td>
-                                    <td><?= $data['peserta']['status_nikah']?></td>
+                                    <td><?= ucwords(strtolower($data['peserta']['jk']))?></td>
+                                    <td><?= ucwords(strtolower($data['peserta']['pendidikan']))?></td>
+                                    <td><?= ucwords(strtolower($data['peserta']['status_nikah']))?></td>
                                     <td>'<?= $data['peserta']['no_hp']?></td>
-                                    <td><?= $data['alamat']['alamat']?></td>
-                                    <td><?= $data['alamat']['provinsi']?></td>
-                                    <td><?= $data['alamat']['kab_kota']?></td>
-                                    <td><?= $data['alamat']['kec']?></td>
-                                    <td><?= $data['alamat']['kel']?></td>
+                                    <td><?= ucwords(strtolower($data['alamat']['alamat']))?></td>
+                                    <td><?= ucwords(strtolower($data['alamat']['provinsi']))?></td>
+                                    <td><?= ucwords(strtolower($data['alamat']['kab_kota']))?></td>
+                                    <td><?= ucwords(strtolower($data['alamat']['kec']))?></td>
+                                    <td><?= ucwords(strtolower($data['alamat']['kel']))?></td>
                                     <td><?= $data['alamat']['kd_pos']?></td>
                                     <td><?= $data['alamat']['no_telp']?></td>
-                                    <td><?= $data['pekerjaan']['pekerjaan']?></td>
-                                    <td><?= $data['ortu']['nama_ayah']?></td>
-                                    <td><?= $data['ortu']['nama_ibu']?></td>
+                                    <td><?= ucwords(strtolower($data['pekerjaan']['pekerjaan']))?></td>
+                                    <td><?= ucwords(strtolower($data['ortu']['nama_ayah']))?></td>
+                                    <td><?= ucwords(strtolower($data['ortu']['nama_ibu']))?></td>
                                 </tr>
                             <?php endforeach;?>
                         <!-- </tbody> -->
