@@ -39,7 +39,8 @@ class Peserta extends CI_CONTROLLER{
             $kelas = $this->Main_model->get_all("kelas_reguler", ["status" => "aktif"]);
             foreach ($kelas as $i => $kelas) {
                     $data['kelas'][$i]['kelas'] = $kelas;
-                    $peserta = $this->Main_model->get_all("peserta", ["id_kelas" => $kelas['id_kelas']]);
+                    $peserta = $this->Main_model->get_all("peserta", ["id_kelas" => $kelas['id_kelas'], "status" => "aktif"]);
+                    $data['kelas'][$i]["peserta"] = [];
                     foreach ($peserta as $j => $peserta) {
                         $data['kelas'][$i]["peserta"][$j]["peserta"] = $peserta;
                         $alamat = $this->Main_model->get_one("alamat", ["id_peserta" => $peserta['id_peserta']]);

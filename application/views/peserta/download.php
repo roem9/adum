@@ -9,26 +9,11 @@
             <div class="table-responsive">
                 <?php foreach ($kelas as $i => $kelas) :?>
                     <table border=1>
-                        <tr>
-                            <td colspan=2><strong>Pengajar</strong></td>
-                            <td colspan="17"><?= $kelas['kelas']['nama_kpq']?></td>
-                        </tr>
-                        <tr>
-                            <td colspan=2><strong>Program</strong></td>
-                            <td colspan="17"><?= $kelas['kelas']['program']?></td>
-                        </tr>
-                        <tr>
-                            <td colspan=2><strong>Tempat</strong></td>
-                            <td colspan="17"><?= $kelas['kelas']['tempat']?></td>
-                        </tr>
-                        <tr>
-                            <td colspan=2><strong>Waktu</strong></td>
-                            <td colspan="17"><?= $kelas['kelas']['hari'] . " " . $kelas['kelas']['jam']?></td>
-                        </tr>
-                    <!-- </table>
-                    <table class="table text-dark" style="font-size: 12px" border=1>
-                        <thead class="thead-light"> -->
                             <tr>
+                                <th>Pengajar</th>
+                                <th>Program</th>
+                                <th>Tempat</th>
+                                <th>Waktu</th>
                                 <th>No</th>
                                 <th>Tgl Daftar</th>
                                 <th>Nama Peserta</th>
@@ -49,12 +34,14 @@
                                 <th>Nama Ayah</th>
                                 <th>Nama Ibu</th>
                             </tr>
-                        <!-- </thead>
-                        <tbody> -->
-                            <?php 
+                            <?php
                                 $no = 0;
                             foreach ($kelas['peserta'] as $data) :?>
                                 <tr>
+                                    <td><?= $kelas['kelas']['nama_kpq']?></td>
+                                    <td><?= $kelas['kelas']['program']?></td>
+                                    <td><?= $kelas['kelas']['tempat']?></td>
+                                    <td><?= $kelas['kelas']['hari'] . " " . $kelas['kelas']['jam']?></td>
                                     <td><?= ++$no?></td>
                                     <td><?= date("d-m-Y", strtotime($data['peserta']['tgl_masuk']))?></td>
                                     <td><?= $data['peserta']['nama_peserta']?></td>
