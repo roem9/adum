@@ -48,8 +48,8 @@
                                     <td><?= ucwords(strtolower($data['peserta']['t4_lahir']))?></td>
                                     <td><?= $data['peserta']['tgl_lahir']?></td>
                                     <td><?= ucwords(strtolower($data['peserta']['jk']))?></td>
-                                    <td><?= ucwords(strtolower($data['peserta']['pendidikan']))?></td>
-                                    <td><?= ucwords(strtolower($data['peserta']['status_nikah']))?></td>
+                                    <td><?= $data['peserta']['pendidikan']?></td>
+                                    <td><?= $data['peserta']['status_nikah']?></td>
                                     <td>'<?= $data['peserta']['no_hp']?></td>
                                     <td><?= ucwords(strtolower($data['alamat']['alamat']))?></td>
                                     <td><?= ucwords(strtolower($data['alamat']['provinsi']))?></td>
@@ -58,7 +58,7 @@
                                     <td><?= ucwords(strtolower($data['alamat']['kel']))?></td>
                                     <td><?= $data['alamat']['kd_pos']?></td>
                                     <td><?= $data['alamat']['no_telp']?></td>
-                                    <td><?= ucwords(strtolower($data['pekerjaan']['pekerjaan']))?></td>
+                                    <td><?= $data['pekerjaan']['pekerjaan']?></td>
                                     <td><?= ucwords(strtolower($data['ortu']['nama_ayah']))?></td>
                                     <td><?= ucwords(strtolower($data['ortu']['nama_ibu']))?></td>
                                 </tr>
