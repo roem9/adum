@@ -36,7 +36,7 @@ class Peserta extends CI_CONTROLLER{
             header("Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
             header('Content-Disposition: attachment;filename="Laporan Kelas Reguler.xls"');
             $data['title'] = "Data Kelas Reguler";
-            $kelas = $this->Main_model->get_all("kelas_reguler", ["status" => "aktif"]);
+            $kelas = $this->Main_model->get_all("kelas_reguler", ["status" => "aktif"], "nama_kpq");
             foreach ($kelas as $i => $kelas) {
                     $data['kelas'][$i]['kelas'] = $kelas;
                     $peserta = $this->Main_model->get_all("peserta", ["id_kelas" => $kelas['id_kelas'], "status" => "aktif"]);
